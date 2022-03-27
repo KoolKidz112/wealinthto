@@ -5,6 +5,7 @@ const btn = document.getElementById("submit");
 btn.addEventListener("click", () => {
   if (!checkForUrl(input.value)) {
     sendRequest(input.value);
+    input.value = "";
     title.textContent = "sent";
   } else {
     title.textContent = "no links";
@@ -23,7 +24,7 @@ function sendRequest(txt) {
   const req = new XMLHttpRequest();
   req.open(
     "POST",
-    "https://discord.com/api/webhooks/957457517049421864/Flj_A5UXLiWaiGn2S6926o9QDAaGB3WeCu58n05KZU51sP_-B3dzzg8qzETXtBVJ254c"
+    "https://discord.com/api/webhooks/957468436810825768/3Xd5hfStJjukTIxgJ8mxPAs5FlPSq3KcOmNA2pvZ33wnorlog7OgeBC68nQxXTWVdgMZ"
   );
   req.setRequestHeader("Content-Type", "application/json");
   const params = {
